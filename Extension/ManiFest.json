@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "My Extension",
+    "version": "2.0.0",
+    "description": "When user access any url, this Extension will predict this url is safe or not.",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs"
+    ]
+}
