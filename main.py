@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import result
 import GetAllJSInPage
+import getalljsfileinpage
 app = Flask(__name__)
 CORS(app)
 
@@ -10,13 +11,13 @@ def api():
     try:
         data=request.get_json()
         url=data['url']
-        javascript_code=GetAllJSInPage.get_all_js_in_page(url)
+        print(url)
+        javascript_code=getalljsfileinpage.get_all_js_in_page(url)
         print(javascript_code)
         feature_counts=result.analyze_javascript_code(javascript_code)
         X=result.change_data(feature_counts)
-        my_prediction,my_probability = result.predict_with_SVM_model(X)   
-        return jsonify({'messenger': my_prediction,
-                        "probability": str(my_probability) + "%"}), 200
+        my_prediction = result.predict_with_DENSE_CNN(X)   
+        return jsonify({'messenger': my_prediction}), 200
     except Exception as e:
         return jsonify({'error':str(e)})
     

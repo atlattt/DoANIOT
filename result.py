@@ -92,7 +92,7 @@ features = {
 
 # Sample JavaScript code (user-provided)
 #Đưa vào địa chỉ trang web cần phân tích
-javascript_code = GetAllJSInPage.get_all_js_in_page('https://uis.ptithcm.edu.vn/#/home')
+# javascript_code = GetAllJSInPage.get_all_js_in_page('https://uis.ptithcm.edu.vn/#/home')
 
 # Initialize a dictionary to store the counts
 feature_counts = {}
@@ -188,13 +188,13 @@ def predict_with_DENSE_CNN(data):
 
 
 # Analyze the JavaScript code
-filtered_data = analyze_javascript_code(javascript_code)
+# filtered_data = analyze_javascript_code(javascript_code)
 
 # Function to change data to the format that the model can predict
 full_values = np.full(len(features), 0)
 
-X = change_data(filtered_data)
-# Load the model
-print(predict_with_SVM_model(X))
-print(predict_with_DENSE_CNN(X))
+# X = change_data(filtered_data)
+# # Load the model
+# print(predict_with_SVM_model(X))
+# print(predict_with_DENSE_CNN(X))
 

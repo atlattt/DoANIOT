@@ -3,7 +3,7 @@ sys.stdout.reconfigure(encoding='utf-8')  # Để in ra được chữ có dấu
 import requests
 from bs4 import BeautifulSoup
 
-# url = 'https://uis.ptithcm.edu.vn/#/home'  # Thay bằng URL của trang web
+#url = 'https://uis.ptithcm.edu.vn/#/home'  # Thay bằng URL của trang web
 
 def get_all_js_in_page(url):
     response = requests.get(url)

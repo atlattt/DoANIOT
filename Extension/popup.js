@@ -20,7 +20,7 @@ getCurrentURL(function (url_) {
     .then((data) => {
       // Display the data on the web page
       const labelData = document.querySelector("#label>b");
-      const probabilityData = document.querySelector("#probability>b");
+    // const probabilityData = document.querySelector("#probability>b");
 
       labelData.textContent = data.messenger;
 
@@ -29,7 +29,7 @@ getCurrentURL(function (url_) {
         else labelData.style.color = "green";
       }
 
-      probabilityData.textContent = data.probability;
+      // probabilityData.textContent = data.probability;
     })
     .catch((error) => {
       console.error("There was a problem with the fetch operation:", error);
